@@ -1,19 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import Header from './components/Header';
+import HeroSection from './components/HeroSection';
+import Products from './components/Products';
+import Testimonials from './components/Testimonials';
+import Footer from './components/Footer';
+import ChatUsButton from './components/ChatUsButton';
 
 function App() {
-
-
   return (
-    
-      <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold text-blue-600 mb-4">Welcome to NexusToolsBox</h1>
-      <p className="text-xl text-gray-700">Your one-stop solution for digital tools</p>
+    <div className="font-sans">
+      <Header />
+      <HeroSection />
+      <Products />
+      <Testimonials />
+      <Footer />
+      <ChatUsButton />
     </div>
-    
-  )
+  );
 }
 
-export default App
+export default App;
+
