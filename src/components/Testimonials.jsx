@@ -3,11 +3,11 @@ import React from 'react';
 const testimonials = [
   {
     quote: "Nexus Tools has transformed the way I work!",
-    author: "Jane Doe",
+    author: "Ram Sharma",
   },
   {
     quote: "An indispensable platform for my business.",
-    author: "John Smith",
+    author: "Amit Pal",
   },
   // Add more testimonials as needed
 ];
