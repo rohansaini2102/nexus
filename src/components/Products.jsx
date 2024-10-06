@@ -21,22 +21,32 @@ const products = [
     image: 'https://i0.wp.com/jupiterseotool.com/wp-content/uploads/2024/05/Talking-Network-11.png?w=381&ssl=1',
   },
   {
+      name: 'Lifetime (On Personal Mail)',//drive
+      price: '₹ 599 INR',
+      image: 'https://logowik.com/content/uploads/images/996_google_drive.jpg', 
+    },
+  {
     name: 'per month',//ahref
-    price: '₹ 149 INR',
+    price: '₹ 449 INR',
     image: 'https://i0.wp.com/jupiterseotool.com/wp-content/uploads/2024/07/Talking-Network-20.png?w=381&ssl=1', 
   },
+  {
+      name: '6 Months (On Personal Mail)',//Linkedin
+      price: '₹ 999 INR',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/8/80/LinkedIn_Logo_2013.svg', 
+    },
   {
     name: 'Yearly (Personal Mail)',//canva
     price: '₹ 199 INR',
     image: 'https://i0.wp.com/jupiterseotool.com/wp-content/uploads/2024/01/619c9f12e1402-4.png?w=381&ssl=1', 
   },
   {
-    name: 'yearly',//quill bot
+    name: 'Per Month',//quill bot
     price: '₹ 129 INR',
     image: 'https://mma.prnewswire.com/media/2032096/QuillBot_logo_Logo.jpg?w=200', 
   },
   {
-    name: 'Yearly',//leonardo ai
+    name: 'Per Month',//leonardo ai
     price: '₹ 499 INR',
     image: 'https://www.bworldonline.com/wp-content/uploads/2024/07/Leonardo-AI-logo.jpg', 
   },
@@ -62,7 +72,7 @@ const products = [
   },
   {
     name: 'Lifetime(On Personal Mail)',//office
-    price: '₹ 499 INR',
+    price: '₹ 599 INR',
     image: 'https://5.imimg.com/data5/SELLER/Default/2022/8/RA/JO/AN/90848123/office-365-premium-software-500x500.png', 
   },
   {
@@ -150,6 +160,11 @@ const products = [
     price: '₹ 149 INR',
     image: 'https://logowik.com/content/uploads/images/youcom-new-20242443.logowik.com.webp', 
   },
+  {
+      name: 'Per Month',//skill share
+      price: '₹ 199 INR',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/c/c0/Skillshare_logo_2020.svg', 
+    },
   // {
   //   name: 'Per Month',//sppechify
   //   price: '₹ 199 INR',
@@ -201,10 +216,11 @@ function ProductCard({ product }) {
       <div className="flex-grow"></div>
       
       {/* Send Message Button */}
-      <button className="w-full bg-blue-800 text-white py-2 rounded-b-lg hover:bg-blue-700 transition-colors duration-300">
-  <a href="https://wa.me/8239555834?text=Hello%20I%20am%20interested%20in%20your%20product" target="_blank" rel="noopener noreferrer">
-    Know more
-  </a>
+      <button 
+  onClick={() => window.open("https://wa.me/8239555834?text=Hello%20I%20am%20interested%20in%20your%20product", "_blank", "noopener,noreferrer")}
+  className="w-full bg-blue-800 text-white py-2 rounded-b-lg hover:bg-blue-700 transition-colors duration-300"
+>
+  Buy Now
 </button>
     </div>
   );
