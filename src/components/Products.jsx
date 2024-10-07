@@ -91,13 +91,18 @@ const products = [
     image: 'https://i.pcmag.com/imagery/reviews/06bnqFCCqMYNmhahHfpuUFs-13.fit_scale.size_1028x578.v1620226809.png', 
   },
   {
+    name: 'One Year (On Personal Mail)',//coursera
+    price: '₹ 599 INR',
+    image: 'https://i.pcmag.com/imagery/reviews/06bnqFCCqMYNmhahHfpuUFs-13.fit_scale.size_1028x578.v1620226809.png', 
+  },
+  {
     name: 'Per Month',//envanto
     price: '₹ 249 INR',
     image: 'https://cabinetm-beta.s3.amazonaws.com/00000160-f64e-981b-451d-6eb4eed4181e.png', 
   },
   {
     name: 'Two Years',//figma
-    price: '₹ 2549 INR',
+    price: '₹ 799 INR',
     image: 'https://cdn.worldvectorlogo.com/logos/figma-5.svg', 
   },
   {
