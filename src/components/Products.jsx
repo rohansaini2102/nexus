@@ -57,7 +57,7 @@ const products = [
   },
   {
     name: 'Per Month',//semrush
-    price: '₹ 129 INR',
+    price: '₹ 199 INR',
     image: 'https://5.imimg.com/data5/SELLER/Default/2023/5/304852598/CL/DY/FW/189067380/semrush-seo-marketing-500x500.png', 
   },
   {
