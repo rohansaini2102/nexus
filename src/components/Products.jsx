@@ -22,7 +22,7 @@ const products = [
   },
   {
       name: 'Lifetime (On Personal Mail)',//drive
-      price: '₹ 599 INR',
+      price: '₹ 499 INR',
       image: 'https://logowik.com/content/uploads/images/996_google_drive.jpg', 
     },
   {
