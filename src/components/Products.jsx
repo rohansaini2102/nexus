@@ -223,7 +223,7 @@ function ProductCard({ product }) {
       {/* Send Message Button */}
       <button 
   onClick={() => window.open("https://wa.me/8239555834?text=Hello%20I%20am%20interested%20in%20your%20product", "_blank", "noopener,noreferrer")}
-  className="w-full bg-blue-800 text-white py-2 rounded-b-lg hover:bg-blue-700 transition-colors duration-300"
+  className="w-full bg-blue-800 text-white py-2 rounded-b-lg hover:bg-black transition-colors duration-300"
 >
   Buy Now
 </button>
