@@ -32,7 +32,7 @@ const products = [
   },
   {
       name: '6 Months (On Personal Mail)',//Linkedin
-      price: '₹ 999 INR',
+      price: '₹ 1399 INR',
       image: 'https://upload.wikimedia.org/wikipedia/commons/8/80/LinkedIn_Logo_2013.svg', 
     },
   {
