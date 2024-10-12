@@ -32,7 +32,7 @@ function HeroSection() {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-blue-500 rounded-full opacity-20 -mt-32 -ml-40 animate-pulse"></div>
+      {/* <div className="absolute top-0 left-0 w-64 h-64 bg-blue-500 rounded-full opacity-20 -mt-32 -ml-40 animate-pulse"></div> */}
       <div className="absolute bottom-0 right-0 w-36 h-56 bg-blue-200 rounded-l-full opacity-20 -mb-18 translate-x-1 animate-pulse"></div>
     </section>
   );

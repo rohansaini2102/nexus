@@ -92,7 +92,7 @@ const products = [
   },
   {
     name: 'One Year (On Personal Mail)',//coursera
-    price: '₹ 599 INR',
+    price: '₹ 999 INR',
     image: 'https://i.pcmag.com/imagery/reviews/06bnqFCCqMYNmhahHfpuUFs-13.fit_scale.size_1028x578.v1620226809.png', 
   },
   {
