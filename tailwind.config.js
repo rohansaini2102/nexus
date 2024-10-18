@@ -21,8 +21,24 @@ module.exports = {
       animation: {
         'fade-in': 'fade-in 0.3s ease-out forwards',
       },
+      backdropFilter: {
+        'blur': 'blur(10px)', // Custom blur value
+      },
+      backgroundColor: {
+        'glass': 'rgba(255, 255, 255, 0.2)', // Semi-transparent background for frosted glass
+      },
+      boxShadow: {
+        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.37)', // Shadow for depth
+      },
+      borderColor: {
+        'glass': 'rgba(255, 255, 255, 0.18)', // Border color for frosted effect
+      },
+      opacity: {
+        '90': '0.9', // Custom opacity value for frosted glass effect
+      },
     },
   },
-  variants: {},
-  plugins: [],
+  plugins: [
+    require('tailwindcss-filters'), // Add this plugin for backdrop-filter utility
+  ],
 };

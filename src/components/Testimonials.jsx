@@ -1,4 +1,6 @@
-// src/components/Testimonials.jsx
+// components/Testimonials.jsx
+"use client"; // Ensures the component is rendered on the client side
+
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
