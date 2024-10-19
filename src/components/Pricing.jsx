@@ -9,100 +9,98 @@ import 'slick-carousel/slick/slick-theme.css';
 function Pricing() {
   const plans = [
     {
-      name: 'Student Plan',
-      price: '₹299',
+      name: 'Writer Plan ✍️',
+      price: '₹799/month',
       discount: '60% Off',
       features: [
-        'Semrush',
-        'Moz Pro',
-        'Ubersuggest',
-        'QuillBot',
-        'Canva Pro',
-        'Wordtune',
-        'VistaCreate',
-        'Nando.ai',
-        'SEOptimer',
-        'Grammarly',
-        'Scribd',
-        'PicMonkey',
+        'ChatGPT Plus 💬',
+        'Grammarly ✏️',
+        'QuillBot 🖋️',
+        'Word AI 📄',
+        'Writesonic 📝',
+        'WriteHuman 🗒️',
+        'Hixai 🧠',
+        'StealthWriter 🕵️‍♂️',
+        'BypassGPT 🔄',
+        'Turnitin 📚',
+        'You.com 🔍',
+        
       ],
-      message: 'Hello, I am interested in the Student Plan.',
+      message: 'Hello, I am interested in the Writer Plan.',
     },
     {
-      name: 'Designer Plan', // Renamed from Blogging Plan
-      price: '₹999',
+      name: 'Designer Plan 🎨',
+      price: '₹999/month',
       discount: 'Limited Time Offer',
       features: [
-        'Semrush',
-        'Moz Pro',
-        'QuillBot',
-        'Storyblocks',
-        'Writesonic',
-        'Canva Pro',
-        'Ubersuggest',
-        'Scite.ai',
-        'PicMonkey',
-        'Mangools (KWFinder)',
-        'Prezi',
-        'NeuronWriter',
-        'AnswerThePublic',
-        'VistaCreate',
-        'Nando.ai',
-        'Jasper.ai',
-        'SEOptimer',
-        'Design.ai',
-        'Grammarly Premium',
-        'Scribd',
-        'InVideo.io',
-        'Wordtune',
-        'ClosersCopy',
-        'Turnitin Student',
-        'WordHero',
-        'Word.ai',
+        'Leonardo.ai – Unlimited Plan 🧠',
+        'InVideo AI 🎥',
+        'Envato 🛍️',
+        'PicMonkey 📸',
+        'DesignAI 🎨',
+        'Shutterstock 📷',
+        'Adobe Stock 🖼️',
+        'Canva 🖌️',
+        'Vecteezy 🖍️',
+        'Epidemic Sounds 🎵',
+       
       ],
       message: 'Hello, I am interested in the Designer Plan.',
       isFeatured: true, // Marking as featured plan
     },
     {
-      name: 'Agency Plan',
-      price: '₹1499',
+      name: 'Agency Plan 🚀',
+      price: '₹1,299/month',
       discount: 'Best Value',
       features: [
-        'Semrush',
-        'Moz Pro',
-        'QuillBot',
-        'Envato Elements',
-        'Placeit',
-        'Vecteezy',
-        'Storyblocks',
-        'Writesonic',
-        'Ubersuggest',
-        'Vyond',
-        'Mangools',
-        'VistaCreate',
-        'Canva Pro',
-        'Nando.ai',
-        'Jasper.ai',
-        'SEOptimer',
-        'Design.ai',
-        'Grammarly Premium',
-        'Scribd',
-        'InVideo.io',
+        // AI & Writing Tools
+        'AI & Writing',
+        'ChatGPT Plus 💬',
+        'Leonardo.ai 🧠',
+        'You.com 🔍',
+        'Grammarly ✏️',
+        'QuillBot 🖋️',
+        'WriteHuman 🗒️',
+        'Hixai 🧠',
+        'BypassGPT 🔄',
+        'Word AI 📄',
+        'Writesonic 📝',
         'Wordtune',
-        'ClosersCopy',
-        'Turnitin Student',
-        'Viral Launch',
-        'PicMonkey',
-        'Prezi',
-        'VidIQ Boost Plan',
-        'WriterZen',
-        'CapCut Pro',
-        'AnswerThePublic',
-        'You.com',
-        'WordHero',
-        'Word.ai',
-        'NeuronWriter',
-        'Coursera',
+        // Design & Creative Tools
+        'Design & Creative',
+        'InVideo 🎥',
+        'Storyblocks 📽️',
+        'Envato 🛍️',
+        'PicMonkey 📸',
+        'DesignAI 🎨',
+        'Renderforest 🌐',
+        'Canva 🖌️',
+        'Vecteezy 🖍️',
+        'Adobe Stock 🖼️',
+        'CapCut ✂️',
+        'Placeit by Envato 📱',
+        // SEO & Marketing Tools
+        'SEO & Marketing',
+        'SEMrush 📈',
+        'Moz Pro 🔧',
+        'Ubersuggest 🌟',
+        'KW Finder 🔍',
+        'SEO Optimizer ⚙️',
+        'Helium 10 🛠️',
+        'Answer the Public ❓',
+        'Sell The Trend 📊',
+        'VidIQ 📹',
+        // Education & Learning Tools
+        'Education & Learning',
+        'Udemy 🎓',
+        'Coursera 📚',
+        'LinkedIn Learning 🧑‍💼',
+        'Skillshare 🖥️',
+        // Other Essentials
+        'Other Essentials',
+        'Turnitin 📚',
+        'Epidemic Sounds 🎵',
+        
       ],
       message: 'Hello, I am interested in the Agency Plan.',
     },
@@ -161,11 +159,12 @@ function Pricing() {
 
               <hr className="border-t border-gray-300 my-6" /> {/* Line separator */}
 
-              <div className="mb-6 flex-grow">
-                <ul className="text-gray-700 columns-2 [column-fill:balance]">
+              {/* Features List with Scroll */}
+              <div className="mb-6 flex-grow overflow-y-auto max-h-96">
+                <ul className="text-gray-700">
                   {plan.features.map((feature, idx) => (
-                    <li key={idx} className="mb-2 break-inside-avoid flex items-center">
-                      <FaCheck className="text-blue-800 mr-2" />
+                    <li key={idx} className="mb-2 flex items-start">
+                      <FaCheck className="text-blue-800 mr-2 mt-1" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -226,11 +225,12 @@ function Pricing() {
 
                 <hr className="border-t border-gray-300 my-6" /> {/* Line separator */}
 
-                <div className="mb-6 flex-grow">
-                  <ul className="text-gray-700 columns-2 [column-fill:balance]">
+                {/* Features List with Scroll */}
+                <div className="mb-6 flex-grow overflow-y-auto max-h-80">
+                  <ul className="text-gray-700">
                     {plan.features.map((feature, idx) => (
-                      <li key={idx} className="mb-2 break-inside-avoid flex items-center">
-                        <FaCheck className="text-blue-800 mr-2" />
+                      <li key={idx} className="mb-2 flex items-start">
+                        <FaCheck className="text-blue-800 mr-2 mt-1" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -289,11 +289,12 @@ function Pricing() {
 
                   <hr className="border-t border-gray-300 my-6" /> {/* Line separator */}
 
-                  <div className="mb-6 flex-grow">
-                    <ul className="text-gray-700 columns-2 [column-fill:balance]">
+                  {/* Features List with Scroll */}
+                  <div className="mb-6 flex-grow overflow-y-auto max-h-80">
+                    <ul className="text-gray-700">
                       {plan.features.map((feature, idx) => (
-                        <li key={idx} className="mb-2 break-inside-avoid flex items-center">
-                          <FaCheck className="text-blue-800 mr-2" />
+                        <li key={idx} className="mb-2 flex items-start">
+                          <FaCheck className="text-blue-800 mr-2 mt-1" />
                           <span>{feature}</span>
                         </li>
                       ))}
