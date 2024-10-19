@@ -14,8 +14,9 @@ function App() {
     <div className="font-sans">
       <Header />
       <Analytics/>
-      <Pricing />
+     
       <HeroSection />
+      <Pricing />
      
       <Products />
       <Testimonials />

@@ -24,7 +24,6 @@ function Pricing() {
         'BypassGPT 🔄',
         'Turnitin 📚',
         'You.com 🔍',
-        
       ],
       message: 'Hello, I am interested in the Writer Plan.',
     },
@@ -43,7 +42,6 @@ function Pricing() {
         'Canva 🖌️',
         'Vecteezy 🖍️',
         'Epidemic Sounds 🎵',
-       
       ],
       message: 'Hello, I am interested in the Designer Plan.',
       isFeatured: true, // Marking as featured plan
@@ -53,8 +51,6 @@ function Pricing() {
       price: '₹1,299/month',
       discount: 'Best Value',
       features: [
-        // AI & Writing Tools
-        'AI & Writing',
         'ChatGPT Plus 💬',
         'Leonardo.ai 🧠',
         'You.com 🔍',
@@ -66,8 +62,6 @@ function Pricing() {
         'Word AI 📄',
         'Writesonic 📝',
         'Wordtune',
-        // Design & Creative Tools
-        'Design & Creative',
         'InVideo 🎥',
         'Storyblocks 📽️',
         'Envato 🛍️',
@@ -79,8 +73,6 @@ function Pricing() {
         'Adobe Stock 🖼️',
         'CapCut ✂️',
         'Placeit by Envato 📱',
-        // SEO & Marketing Tools
-        'SEO & Marketing',
         'SEMrush 📈',
         'Moz Pro 🔧',
         'Ubersuggest 🌟',
@@ -90,17 +82,12 @@ function Pricing() {
         'Answer the Public ❓',
         'Sell The Trend 📊',
         'VidIQ 📹',
-        // Education & Learning Tools
-        'Education & Learning',
         'Udemy 🎓',
         'Coursera 📚',
         'LinkedIn Learning 🧑‍💼',
         'Skillshare 🖥️',
-        // Other Essentials
-        'Other Essentials',
         'Turnitin 📚',
         'Epidemic Sounds 🎵',
-        
       ],
       message: 'Hello, I am interested in the Agency Plan.',
     },
@@ -111,7 +98,7 @@ function Pricing() {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 1.05, // Show a bit of the next slide
     slidesToScroll: 1,
     arrows: false, // Hide arrows on mobile
   };
@@ -119,7 +106,7 @@ function Pricing() {
   return (
     <section id="pricing" className="relative py-20 px-4 bg-white">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-12 animate-fade-in">
+        <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
           Pricing Plans
         </h2>
 
@@ -128,10 +115,10 @@ function Pricing() {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative flex flex-col p-8 bg-glass backdrop-filter backdrop-blur rounded-2xl shadow-glass animate-fade-in transition-transform transform hover:scale-105 ${
+              className={`relative flex flex-col p-8 bg-white bg-opacity-70 backdrop-filter backdrop-blur rounded-2xl shadow-lg transition-transform transform hover:scale-105 ${
                 plan.isFeatured
                   ? 'border-4 border-blue-800'
-                  : 'border border-glass'
+                  : 'border border-gray-200'
               }`}
             >
               {/* Discount Badge as Circle */}
@@ -154,7 +141,9 @@ function Pricing() {
                 <h3 className="text-2xl font-semibold text-gray-800 mb-2">
                   {plan.name}
                 </h3>
-                <p className="text-4xl font-bold text-blue-800">{plan.price}</p>
+                <p className="text-4xl font-bold text-blue-800">
+                  {plan.price}
+                </p>
               </div>
 
               <hr className="border-t border-gray-300 my-6" /> {/* Line separator */}
@@ -191,83 +180,20 @@ function Pricing() {
 
         {/* Mobile View */}
         <div className="lg:hidden">
-          {plans.slice(0, 1).map((plan, index) => (
-            <div key={index} className="px-4 mb-8">
-              <div
-                className={`relative flex flex-col p-8 bg-glass backdrop-filter backdrop-blur rounded-2xl shadow-glass animate-fade-in transition-transform transform hover:scale-105 ${
-                  plan.isFeatured
-                    ? 'border-4 border-blue-800'
-                    : 'border border-glass'
-                }`}
-              >
-                {/* Discount Badge as Circle */}
-                {plan.discount && (
-                  <div className="absolute -top-4 right-4 bg-blue-800 text-white w-16 h-16 flex items-center justify-center rounded-full shadow-lg">
-                    <span className="text-sm font-bold text-center px-2">
-                      {plan.discount}
-                    </span>
-                  </div>
-                )}
-
-                {/* Special Offer Badge for Featured Plan */}
-                {plan.isFeatured && (
-                  <div className="absolute top-4 left-4 bg-yellow-500 text-white px-4 py-1 rounded-md shadow-lg">
-                    Special Offer
-                  </div>
-                )}
-
-                <div className="mb-6 text-center">
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-2">
-                    {plan.name}
-                  </h3>
-                  <p className="text-4xl font-bold text-blue-800">{plan.price}</p>
-                </div>
-
-                <hr className="border-t border-gray-300 my-6" /> {/* Line separator */}
-
-                {/* Features List with Scroll */}
-                <div className="mb-6 flex-grow overflow-y-auto max-h-80">
-                  <ul className="text-gray-700">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="mb-2 flex items-start">
-                        <FaCheck className="text-blue-800 mr-2 mt-1" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <button
-                  onClick={() =>
-                    window.open(
-                      `https://wa.me/8239555834?text=${encodeURIComponent(
-                        plan.message
-                      )}`,
-                      '_blank',
-                      'noopener,noreferrer'
-                    )
-                  }
-                  className="w-full py-3 bg-blue-800 text-white font-semibold rounded-xl shadow-md hover:bg-black transition-colors duration-300 mt-auto"
-                >
-                  Buy Now
-                </button>
-              </div>
-            </div>
-          ))}
           <Slider {...sliderSettings}>
-            {plans.slice(1).map((plan, index) => (
+            {plans.map((plan, index) => (
               <div key={index} className="px-4">
                 <div
-                  className={`relative flex flex-col p-8 bg-glass backdrop-filter backdrop-blur rounded-2xl shadow-glass animate-fade-in transition-transform transform hover:scale-105 ${
+                  className={`relative flex flex-col p-8 bg-white bg-opacity-70 backdrop-filter backdrop-blur rounded-2xl shadow-lg transition-transform transform hover:scale-105 ${
                     plan.isFeatured
                       ? 'border-4 border-blue-800'
-                      : 'border border-glass'
+                      : 'border border-gray-200'
                   }`}
                 >
                   {/* Discount Badge as Circle */}
                   {plan.discount && (
-                    <div className="absolute -top-4 right-4 bg-blue-800 text-white w-16 h-16 flex items-center justify-center rounded-full shadow-lg">
-                      <span className="text-sm font-bold text-center px-2">
+                    <div className="absolute -top-4 right-4 bg-blue-800 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg">
+                      <span className="text-xs font-bold text-center px-1">
                         {plan.discount}
                       </span>
                     </div>
@@ -275,26 +201,28 @@ function Pricing() {
 
                   {/* Special Offer Badge for Featured Plan */}
                   {plan.isFeatured && (
-                    <div className="absolute top-4 left-4 bg-yellow-500 text-white px-4 py-1 rounded-md shadow-lg">
+                    <div className="absolute top-2 left-2 bg-red-800 text-white px-3 py-1 rounded-md shadow-lg text-xs">
                       Special Offer
                     </div>
                   )}
 
-                  <div className="mb-6 text-center">
-                    <h3 className="text-2xl font-semibold text-gray-800 mb-2">
+                  <div className="mb-4 text-center">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-1">
                       {plan.name}
                     </h3>
-                    <p className="text-4xl font-bold text-blue-800">{plan.price}</p>
+                    <p className="text-3xl font-bold text-blue-800">
+                      {plan.price}
+                    </p>
                   </div>
 
-                  <hr className="border-t border-gray-300 my-6" /> {/* Line separator */}
+                  <hr className="border-t border-gray-300 my-4" /> {/* Line separator */}
 
                   {/* Features List with Scroll */}
-                  <div className="mb-6 flex-grow overflow-y-auto max-h-80">
+                  <div className="mb-4 flex-grow overflow-y-auto max-h-96">
                     <ul className="text-gray-700">
                       {plan.features.map((feature, idx) => (
                         <li key={idx} className="mb-2 flex items-start">
-                          <FaCheck className="text-blue-800 mr-2 mt-1" />
+                          <FaCheck className="text-blue-800 mr-2 mt-0.5" />
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -311,7 +239,7 @@ function Pricing() {
                         'noopener,noreferrer'
                       )
                     }
-                    className="w-full py-3 bg-blue-800 text-white font-semibold rounded-xl shadow-md hover:bg-black transition-colors duration-300 mt-auto"
+                    className="w-full py-2 bg-blue-800 text-white font-semibold rounded-xl shadow-md hover:bg-black transition-colors duration-300 mt-auto text-sm"
                   >
                     Buy Now
                   </button>
