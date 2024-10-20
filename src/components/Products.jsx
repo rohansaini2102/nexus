@@ -8,7 +8,7 @@ const products = [
   {
     id: 'grammarly-per-month',
     name: 'Grammarly - Per Month',
-    price: '₹ 129 INR',
+    price: '₹ 169 INR',
     image: 'https://i0.wp.com/jupiterseotool.com/wp-content/uploads/2024/01/Grammarly-Group-Buy-Seo-300x70-1.webp?fit=300%2C70&ssl=1',
   },
   {
@@ -20,7 +20,7 @@ const products = [
   {
     id: 'freepik-per-month',
     name: 'Freepik - Per Month',
-    price: '₹ 249 INR',
+    price: '₹ 349 INR',
     image: 'https://i0.wp.com/jupiterseotool.com/wp-content/uploads/2024/05/Talking-Network-11.png?w=381&ssl=1',
   },
   {
@@ -50,13 +50,13 @@ const products = [
   {
     id: 'quillbot-per-month',
     name: 'QuillBot - Per Month',
-    price: '₹ 129 INR',
+    price: '₹ 149 INR',
     image: 'https://mma.prnewswire.com/media/2032096/QuillBot_logo_Logo.jpg?w=200',
   },
   {
     id: 'leonardo-per-month',
     name: 'Leonardo AI - Per Month',
-    price: '₹ 499 INR',
+    price: '₹ 349 INR',
     image: 'https://www.bworldonline.com/wp-content/uploads/2024/07/Leonardo-AI-logo.jpg',
   },
   {
@@ -74,7 +74,7 @@ const products = [
   {
     id: 'perplexity-per-month',
     name: 'Perplexity AI - Per Month',
-    price: '₹ 249 INR',
+    price: '₹ 500 INR',
     image: 'https://b3718828.smushcdn.com/3718828/wp-content/uploads/2024/03/Perplexity-AI.Blog_-2.jpg?lossy=2&strip=1&webp=1',
   },
   {
@@ -194,7 +194,7 @@ const products = [
   {
     id: 'youcom-per-month',
     name: 'You.com - Per Month',
-    price: '₹ 149 INR',
+    price: '₹ 399 INR',
     image: 'https://logowik.com/content/uploads/images/youcom-new-20242443.logowik.com.webp',
   },
   {
